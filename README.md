@@ -17,21 +17,10 @@ Ensure the following are installed on your Windows machine before starting:
 
 ---
 
-## 📂 Project Structure
-
-```text
-├── build.gradle          # Backend configuration (Gradle)
-├── package.json          # Root scripts (Backend wrappers)
-├── src/                  # Backend Source Code
-└── client/               # Frontend Application
-    ├── package.json
-    └── src/
-
-
-
-🚀 Development: Running Locally
+## 🚀 Development: Running Locally
 
 You will need two separate terminal windows to run the full application.
+
 1. Start the Backend (Spring Boot)
 
 The backend is located in the root directory.
@@ -39,36 +28,35 @@ The backend is located in the root directory.
 In Terminal 1 (Root Directory):
 code Powershell
 
-
 # Starts the Java server using the wrapper script
+
 pnpm dev
 
-
-
-Wait until you see the Spring logo and "Started Application..." in the console.
-2. Start the Frontend (Client)
+Wait until you see the Spring logo and "Started Application..." in the console. 2. Start the Frontend (Client)
 
 The frontend is located in the client folder.
 
 In Terminal 2:
 code Powershell
 
-
 # Navigate to the client folder
+
 cd client
 
 # Install dependencies (required for first run only)
+
 npm install
 
 # Start the Vite development server
+
 npm run dev
 
-
-
 The application will launch in your browser (typically at http://localhost:5173).
-🛠️ Building for Production
+
+## 🛠️ Building for Production
 
 To create optimized artifacts for deployment, follow these steps.
+
 1. Build the Backend
 
 This compiles the Java code into a standalone executable .jar file.
@@ -76,10 +64,7 @@ This compiles the Java code into a standalone executable .jar file.
 From the Root Directory:
 code Powershell
 
-
 pnpm build
-
-
 
     Output: The executable file will be generated at build/libs/your-app-name.jar.
 
@@ -90,12 +75,9 @@ This compiles the Vue code into static HTML/CSS/JS files suitable for serving.
 From the Client Directory:
 code Powershell
 
-
 cd client
 pnpm install
 pnpm build
-
-
 
     Output: The static files will be generated in the client/dist folder.
 
@@ -142,3 +124,4 @@ The application will start on the configured backend port (default: 8080).
     Open your browser to: http://localhost:8080
 
     You will see the Vue.js frontend, communicating with the Spring Boot API on the same port.
+```
