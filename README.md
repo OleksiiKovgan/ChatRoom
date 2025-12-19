@@ -17,6 +17,14 @@ Ensure the following are installed on your Windows machine before starting:
 
 ---
 
+## 💾 Database & Data Persistence
+
+This project uses an **H2 In-Memory Database** for development simplicity.
+
+- **Zero Configuration:** There are no database settings in `application.properties` because Spring Boot auto-configures the connection based on the `com.h2database:h2` dependency found in `build.gradle.kts`.
+- **Storage Type:** The database runs entirely in RAM (`jdbc:h2:mem:testdb`).
+- **⚠️ Important Data Behavior:** **Data is volatile.** Every time you stop or restart the backend server, the database is wiped clean. All created chat rooms and messages will be lost.
+
 ## 🚀 Development: Running Locally
 
 You will need two separate terminal windows to run the full application.
